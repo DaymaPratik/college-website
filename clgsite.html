@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header{
+    height: 100vh;
+    width: 100%;
+    background-image: url(images2/banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    opacity: 0.9;
+    
+}
+.navbar{
+    display: flex;
+}
+.navlist ul{
+    margin-left: 85px;
+    display: flex;
+    list-style: none;
+
+}
+.navlist ul li{
+    padding: 15px 40px;
+}
+.navlist ul li a{
+    font-size: 20px;
+    display: flex;
+    text-decoration: none;
+    color: blanchedalmond;
+    
+}
+.navlist ul li a:hover{
+    font-weight: 500;
+    border-bottom:3px solid crimson;
+    transition: 0.5s ease;
+}
+.search{
+    background: transparent;
+    margin: 12px;
+}
+.search input{
+    padding-left: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: white;
+    border: 3px solid white;
+    background: transparent;
+    width: 400px;
+    height: 28px;
+    
+}
+.welcome{
+    position: absolute;
+    height: 80vh;
+    width: 90%;
+    top: 75%;
+    left: 50%;;
+    text-align: center;
+    color: rgb(87, 87, 85);
+    transform: translate(-50% , -50%);
+}
+.welcome h1{
+    font-size: 50px;
+}
+.welcome p{
+    font-size: 21px;
+}
+ .btn{
+    
+     width: 130px;
+     position: relative;
+    display: flex;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 12px;
+    top: 45%;
+    left: 46%;
+}
+.btn a{
+    
+    text-decoration: none;
+    color: whitesmoke;
+    
+}
+.btn :hover{
+    background-color: rgb(196, 36, 36);
+    color: rgb(238, 234, 234);
+    transition: 0.7s ease-in-out;
+    border-radius: 12px;
+
+}
+/* OUR COURSES */
+.row{
+    display: flex;
+    margin: 30px;
+    height: 35vh;
+    width: 95%;
+    text-align: center;
+    justify-content: center;
+}
+.courses h1{
+    color: dimgrey;
+    font-size: 50px;
+    position: relative;
+    width: 95vw;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+.courses p{
+    color: dimgrey;
+    position: relative;
+    width: 95vw;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+ .courses .row .column{
+    box-sizing: border-box;
+    color: dimgrey;
+    margin: 20px;
+    background-color: #fff3f3;
+    border: 2px solid #fff3f3;;
+    padding: 20px;
+    border-radius: 10px;
+    height: 25vh;
+    transition: 0.5s ease;
+}
+.courses .row .column:hover{
+    box-shadow: 0 0 20px 0 dimgrey;
+}
+ .courses .row .column h2{
+    margin-bottom: 8px;
+
+}
+/* CAMPUS */
+.campus h1{
+    font-size: 50px;
+    margin: 5px;
+}
+.campus{
+    color: dimgrey;
+    height: 100%;
+    margin: 10px auto;
+    text-align: center;
+    padding-top: 10px;
+}
+.row{
+    height: 100%;
+}
+.col{
+    flex-basis: 32%;
+    position: relative;
+    border-radius: 10px;
+    margin: 10px;
+    overflow: hidden;
+}
+.col img{
+    width: 100%;
+}
+.col .layer{
+    background: transparent;
+    width: 100%;
+     height: 100%;
+     position: absolute;
+     top: 0;
+     transition: 0.2s ease;
+     
+}
+.col .layer:hover{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(241, 60, 60);
+    opacity: 0.7;
+    
+}
+.layer h2{
+    bottom: 0;
+    position: absolute;
+    left: 31%;
+    color: white;
+    font-size: 32px;
+    padding-bottom: 8px;
+    transition: 0.4s ease-in;
+    opacity: 0;
+    
+}
+.layer:hover h2{
+    bottom: 50%;
+    opacity: 1;
+}
+/* OUR FACILITIES */
+.facilities{
+    color: dimgrey;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    padding-top: 25px;
+}
+ .facilities .column{
+     margin: 15px;
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin: 10px;
+    overflow: hidden;
+    transition: 0.5s ease;
+    
+}
+.facilities img{
+    width: 100%;
+  border-radius: 10px;
+  margin-left:5px ;
+  margin-right: 30px;
+}
+.facilities .column:hover{
+    box-shadow: 0 0 20px 0 rgb(14, 13, 13);
+}
+.testimonials{
+    color: dimgrey;
+    width: 80%;
+    text-align: center;
+    padding-top: 30px;
+    margin: auto;
+}
+
+.testimonials .column{
+    font-size: small;
+    /* box-sizing: border-box; */
+    display: flex;
+    border-radius: 10px;
+    text-align: left;
+    transition: 0.5s ease-out;
+    background: thistle;
+    cursor: pointer;
+    margin: 0px 31px;
+    flex-basis: 49%;
+
+}
+.testimonials .column img{
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.testimonials .row{
+        display: flex;
+        margin: 30px;
+        height: 15vh;
+        width: 95%;
+        text-align: center;
+        justify-content: center;
+}
+.testimonials .column div p{
+    margin: 13px 20px;
+    padding: 5px;
+}
+.testimonials .column div h2{
+    position: relative;
+    top: 5%;
+    left: 30%;
+}
+.testimonials .column:hover{
+    box-shadow: 0 0 20px 0 black;
+}
+/* FOOTER PART */
+.footer{
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    background-image: url(images2/background.jpg);
+    padding: 130px;
+
+}
+.footer .online{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        right: 9%;  
+        position: relative;
+}
+.footer .online h2{
+    padding: 20px;
+    text-align: left;
+    font-size: 40px;
+    color: white;
+}
+.footer p{
+    color: white;
+    margin-left: 25px;
+}
+
+.footer .online a{
+    border: 3px solid whitesmoke;
+font-size: 25px;
+width: 140px;
+height: 32px;
+text-decoration: none;
+color: whitesmoke;
+margin-top: 20px;
+background: transparent;
+transition: 0.5s ease;
+border-radius: 10px;
+left: 2%;
+position: relative;
+padding: 2px;
+
+}
+.footer .online a:hover{
+    width: 142px;
+    height: 32px;   
+    background-color: whitesmoke ;
+    color: black;
+    border-radius: 10px;
+}
+.footer .login{
+    text-align: center;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 55vh;
+    /* opacity: 0.7; */
+    background: #090909;
+    border-radius: 10px;
+    width: 400px;
+    transition: 0.4s ease;
+}
+.footer .login:hover{
+    box-shadow: 0 0 20px 0 rgb(241, 225, 6);
+}
+.footer .login a{
+    position: relative;
+    margin: 25px 10px; 
+    background: orange;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    margin: auto;
+    padding: 5px;
+    transition: 0.5s ease;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 200px;
+    
+}
+.footer .login a:hover{
+    background-color:white;
+    color:black;
+}
+.footer .login div{
+    text-align: center;
+    margin-right: 22px;
+}
+.footer .login input{
+    font-size: 20px;
+    color: white;
+    margin: 15px 10px;
+    background: transparent;
+    height: 30px;
+    border: none;
+}
+.footer .login .uncol{ 
+    font-size: 15px;
+}
+.footer .login .col{
+    color: orange;
+    transition: 0.3s ease;
+}
+.footer .login .col:hover{
+    color: white;
+}
+    </style>
+    
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="logo">
+              <img src="images2/logo.png" alt="">
+        </div>
+        <div class="navlist">
+            <ul >
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Carrers</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Help<a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search Here">
+        </div>
+    </nav>
+    <div class="welcome">
+            <h1>Welcome to Biggest University</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit exercitationem non <br> vel odit iste earum tempora molestiae sed explicabo quibusdam!</p>
+    </div>
+    <div class="btn">
+        <a href="#">Visit To Know More</a>
+    </div>
+    </header>
+    <main>
+        <div class="courses">
+            <h1>Our Courses</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing , iure, esse perspiciatis magnam rerum accusamus corporis molestiae, recusandae quibusdam!</p>
+            <div class="row">
+                <div class="column">
+                    <h2>Intermidiate</h2>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus at nulla, facere laborum obcaecati rem harum eum labore consequuntur, consequatur ipsa, exercitationem impedit esse! Id dolorum quae pariatur excepturi quam.
+                </div>
+                <div class="column">
+                    <h2>Graduate</h2>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus at nulla, facere laborum obcaecati rem harum eum labore consequuntur, consequatur ipsa, exercitationem impedit esse! Id dolorum quae pariatur excepturi quam.
+                </div>
+                <div class="column">
+                    <h2>Post-Graduate</h2>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus at nulla, facere laborum obcaecati rem harum eum labore consequuntur, consequatur ipsa, exercitationem impedit esse! Id dolorum quae pariatur excepturi quam.
+                </div>
+            </div>
+        </div>
+        <div class="campus">
+            <h1>Our Campus</h1>
+            <p>Lorem ipsrepudiandae rem nihil impedit officiis porro magnam voluptatum minus doloribus provident ut! Omnis.</p>
+            <div class="row">
+                <div class="col">
+                    <img src="images2/london.png" alt="">
+                    <div class="layer">
+                        <h2>LONDON</h2>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images2/washington.png" alt="">
+                    <div class="layer">
+                        <h2>WASHINGTON</h2>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images2/newyork.png" alt="">
+                    <div class="layer">
+                        <h2>NEWYORK</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="facilities">
+                <h1>OUR FACILITIES</h1>
+               <p>Lorem ipsum dolor sit at voluptatibus exercitationem odio, impedit dolore illum non, amet, magnam doloribus saepe.</p>
+               <div class="row">
+                   <div class="column">
+                       <img src="images2/library.png" alt="">
+                       <h2>Library</h2>
+                   </div>
+                   <div class="column">
+                    <img src="images2/basketball.png" alt="">
+                    <h2>BasketBall</h2>
+                </div>
+                <div class="column">
+                    <img src="images2/cafeteria.png" alt="">
+                    <h2>Cafeteria</h2>
+                </div>
+               </div>
+            </div>
+
+           
+        </div>
+        <div class="testimonials">
+            <h1>What Our Student Says</h1>
+            <p>Lorem ipsum dolor sit ametptate, iste dicta rem odio consequatur dolorem impedit possimus blanditiis!</p>
+            <div class="row">
+                <div class="column">
+                    <img src="images2/user1.jpg" alt="">
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipquae <br> quibusdam cumque? Quo dolorem sit veniam illum quis!
+                            <br> quibusdam cumque? Quo dolorem sit veniam illum quis!</p>
+                        <h2>Christine Watson</h2>
+                    </div>
+                   
+                </div>
+                <div class="column">
+                    <img src="images2/user2.jpg" alt="">
+                    <div>
+                        <p>Lorem ipsum dolor sit similique dolorem quae quibu <br> sdam cumque? Quo dolorem sit veniam illum quis!
+                            <br> quibusdam cumque? Quo dolorem sit veniam illum quis!</p>
+                        <h2>Rorery Rodes</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="online">
+            <h2>Enroll our online courses from anywhere</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At a praesentium porro assume <br> nda ullam? Nisi praesentium magni placeat natus sunt tempora animi <br> quae culpa voluptatum! Nihil quod alias adipisci tempora!</p>
+            <a href="#">Enroll Now</a>
+        </div>
+        
+        <div class="login">
+              <a href="#">Login Here</a>
+              <input type="text" placeholder="Enter Email Here">
+              <input type="text" placeholder="Enter Password Here">
+              <a href="#">Login</a>
+              <div>
+                <p class="uncol">Don't Have An Account <br> <p class="col"> Sign Up</p> Here</p>
+              </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
